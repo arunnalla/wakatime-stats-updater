@@ -1,0 +1,14 @@
+name: Update Statistics
+on:
+  schedule:
+    - cron: '0 0 * * *'
+jobs:
+  update-statistics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: waka-box
+        uses: matchai/waka-box@v4.0.5
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
