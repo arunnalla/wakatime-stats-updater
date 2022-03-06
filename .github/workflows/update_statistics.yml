@@ -1,7 +1,7 @@
 name: Update Statistics
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * *'
 jobs:
   update-statistics:
     runs-on: ubuntu-latest
